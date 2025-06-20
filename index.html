@@ -4,6 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>GMB Partners | Performance local no Google</title>
+<meta name="description" content="GMB Partners - Otimize seu Google Meu Negócio para aumentar ligações e visitas locais sem depender de anúncios. Visibilidade real e crescimento sustentável."/>
+<link rel="icon" href="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
@@ -15,6 +17,7 @@
     font-family: 'Inter', sans-serif;
     background: #f9f9f9;
     color: #1a1a1a;
+    line-height: 1.6;
   }
 
   header {
@@ -25,13 +28,19 @@
   }
 
   header h1 { font-size: 2.8em; font-weight: 700; }
-  header p { font-size: 1.2em; opacity: 0.9; max-width: 700px; margin: 20px auto 0; }
+  header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 20px auto 0;
+  }
 
   section {
     max-width: 1000px;
     margin: 60px auto;
     padding: 0 20px;
-    position: relative; z-index: 1;
+    position: relative; 
+    z-index: 1;
   }
 
   section::before {
@@ -40,23 +49,38 @@
     background-size: 300px;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.08;
+    opacity: 0.1;
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+    pointer-events: none;
   }
 
   section > * { position: relative; z-index: 2; }
 
   h2 { font-size: 2em; margin-bottom: 20px; color: #0f264b; }
 
-  .pitch p, .proposta p { font-size: 1.1em; margin-bottom: 20px; }
+  .pitch p, .proposta p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
 
-  ul { list-style-type: none; padding-left: 0; }
+  .pitch p:last-child {
+    font-style: italic;
+    color: #444;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
   ul li {
     margin-bottom: 10px;
     position: relative;
     padding-left: 28px;
+    font-weight: 500;
   }
+
   ul li::before {
     content: "✔️";
     position: absolute;
@@ -73,6 +97,7 @@
     gap: 20px 30px;
     margin-top: 30px;
   }
+
   .card {
     background: #fff;
     padding: 24px;
@@ -82,44 +107,55 @@
     display: flex;
     align-items: center;
   }
-  .card:hover { transform: translateY(-4px); }
-  .card .icon {
-    font-size: 1.5em;
-    margin-right: 12px;
+
+  .card:hover {
+    transform: translateY(-4px);
   }
+
+  .card .icon {
+    font-size: 1.8em;
+    margin-right: 14px;
+  }
+
   .card p {
     margin: 0;
     font-size: 1em;
+    font-weight: 600;
+    color: #0f264b;
   }
 
   .cta {
     text-align: center;
     margin-top: 60px;
   }
+
   .cta p {
     margin-bottom: 20px;
     font-size: 1.1em;
   }
+
   .btn {
     background-color: #0f264b;
     color: #fff;
     padding: 14px 32px;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1em;
     transition: 0.3s;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     display: inline-flex;
     align-items: center;
   }
+
   .btn:hover {
     background-color: #091b34;
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
+
   .btn .wa-icon {
-    margin-right: 8px;
-    font-size: 1.2em;
+    margin-right: 10px;
+    font-size: 1.4em;
   }
 
   .whatsapp-float {
@@ -132,7 +168,7 @@
     border-radius: 50%;
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 26px;
     z-index: 1000;
   }
 
@@ -143,6 +179,17 @@
     font-size: 0.9em;
     color: #555;
     margin-top: 60px;
+  }
+
+  footer a {
+    color: #0f264b;
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: 600;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 800px) {
@@ -163,56 +210,87 @@
 
 <header>
   <h1 data-aos="fade-up">GMB Partners</h1>
-  <p data-aos="fade-up" data-aos-delay="200">Fazemos seu negócio aparecer onde mais importa: no topo do Google.</p>
+  <p data-aos="fade-up" data-aos-delay="200">
+    Fazemos seu negócio aparecer onde mais importa: no topo do Google.
+  </p>
 </header>
 
-<section class="pitch" data-aos="fade-up">
-  <p>Negócios locais perdem até 40% dos clientes por estarem invisíveis no Google. A <strong>GMB Partners</strong> aumenta chamadas e visitas em até 60 dias. Sem anúncios.</p>
+<section class="pitch" data-aos="fade-up" aria-label="Sobre a GMB Partners">
+  <p>
+    Negócios locais perdem até 40% dos clientes por estarem invisíveis no Google. A <strong>GMB Partners</strong> aumenta chamadas e visitas em até 60 dias, sem depender de anúncios.
+  </p>
+  <p>
+    Somos especialistas em transformar perfis invisíveis no Google Meu Negócio em máquinas de geração de clientes locais, por meio de estratégias personalizadas, otimização contínua e foco em reputação.
+  </p>
   <p><em>“Transformamos perfis invisíveis em máquinas de chamadas e visitas locais.”</em></p>
 </section>
 
-<section class="proposta" data-aos="fade-up">
+<section class="proposta" data-aos="fade-up" aria-label="Proposta de serviços da GMB Partners">
   <h2>Como ajudamos sua empresa</h2>
   <p><strong>Problema:</strong> Perfis mal otimizados, sem reviews ou estratégia, perdem clientes.</p>
   <p><strong>Solução:</strong></p>
   <ul>
     <li>Otimização no Google Meu Negócio</li>
-    <li>Palavras-chave locais</li>
-    <li>Mais reviews 5 estrelas</li>
-    <li>Postagens semanais</li>
-    <li>Monitoramento mensal</li>
+    <li>Palavras-chave locais estrategicamente escolhidas</li>
+    <li>Mais reviews 5 estrelas para fortalecer reputação</li>
+    <li>Postagens semanais alinhadas com copywriting eficaz</li>
+    <li>Monitoramento e ajustes mensais para manter o topo</li>
   </ul>
 </section>
 
-<section class="beneficios" data-aos="fade-up">
+<section class="beneficios" data-aos="fade-up" aria-label="Benefícios reais oferecidos pela GMB Partners">
   <h2>Benefícios Reais</h2>
   <div class="benefits">
-    <div class="card" data-aos="fade-up" data-aos-delay="100"><span class="icon">📞</span><p>Topo das buscas locais</p></div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200"><span class="icon">📈</span><p>Receber mais ligações e visitas espontâneas</p></div>
-    <div class="card" data-aos="fade-up" data-aos-delay="300"><span class="icon">⭐</span><p>Melhorar reputação e percepção do negócio</p></div>
-    <div class="card" data-aos="fade-up" data-aos-delay="400"><span class="icon">📊</span><p>Mais ligações e visitas espontâneas</p></div>
-    <div class="card" data-aos="fade-up" data-aos-delay="500"><span class="icon">👍</span><p>Reputação fortalecida</p></div>
-    <div class="card" data-aos="fade-up" data-aos-delay="600"><span class="icon">🌱</span><p>Crescimento sem anúncios</p></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <span class="icon" aria-hidden="true">📞</span>
+      <p>Topo das buscas locais</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <span class="icon" aria-hidden="true">📈</span>
+      <p>Mais ligações e visitas espontâneas</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <span class="icon" aria-hidden="true">⭐</span>
+      <p>Melhorar reputação e percepção do negócio</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <span class="icon" aria-hidden="true">🔄</span>
+      <p>Atualizações e monitoramento contínuo</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="500">
+      <span class="icon" aria-hidden="true">🔝</span>
+      <p>Reputação fortalecida</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="600">
+      <span class="icon" aria-hidden="true">🌱</span>
+      <p>Crescimento sustentável sem anúncios</p>
+    </div>
   </div>
 </section>
 
-<section class="cta" data-aos="fade-up">
+<section class="cta" data-aos="fade-up" aria-label="Chamada para contato">
   <h2>Vamos conversar?</h2>
   <p>Fale agora com um especialista:</p>
-  <a href="https://wa.me/5511953090058" class="btn" target="_blank">
-    <span class="wa-icon">💬</span> Fale no WhatsApp
+  <a href="https://wa.me/5511953090058" class="btn" target="_blank" aria-label="Fale no WhatsApp com especialista GMB Partners">
+    <span class="wa-icon" aria-hidden="true">💬</span> Fale no WhatsApp
   </a>
 </section>
 
-<a href="https://wa.me/5511953090058" class="whatsapp-float" title="Fale conosco no WhatsApp" target="_blank">💬</a>
+<a href="https://wa.me/5511953090058" class="whatsapp-float" title="Fale conosco no WhatsApp" aria-label="Fale conosco no WhatsApp" target="_blank" rel="noopener">💬</a>
 
-<footer>
-  &copy; 2025 GMB Partners. Todos os direitos reservados.
+<footer role="contentinfo">
+  &copy; 2025 GMB Partners. Todos os direitos reservados.<br />
+  <a href="mailto:contato.gmbpartners@gmail.com">contato.gmbpartners@gmail.com</a> | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({ duration: 800, once: true });
+  AOS.init({
+    once: true,
+    duration: 700,
+    easing: 'ease-out-cubic',
+  });
 </script>
+
 </body>
 </html>
