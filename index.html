@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GMB Partners | Performance local no Google</title>
   <style>
     body {
@@ -10,65 +10,126 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f8f6;
       color: #0f264b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    }
+
+    header {
+      background-color: #0f264b;
+      color: #fff;
+      padding: 40px 20px;
       text-align: center;
-      padding: 20px;
     }
 
-    .container {
-      max-width: 600px;
+    header img {
+      max-width: 160px;
+      margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
 
-    p {
+    .pitch, .proposta, .cta {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .pitch p, .proposta p {
       font-size: 1.1em;
-      margin-bottom: 30px;
       line-height: 1.6;
+    }
+
+    .proposta h2 {
+      margin-top: 40px;
+      font-size: 1.8em;
+    }
+
+    .proposta ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .proposta ul li::before {
+      content: "✔️ ";
+    }
+
+    .cta {
+      margin-top: 60px;
     }
 
     .btn {
       background-color: #0f264b;
       color: #fff;
-      padding: 12px 24px;
+      padding: 14px 28px;
       border: none;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 1.1em;
       transition: background 0.3s;
+      display: inline-block;
+      margin-top: 20px;
     }
 
     .btn:hover {
       background-color: #09182e;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.6em;
-      }
-
-      p {
-        font-size: 1em;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <img src="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg" alt="Logo GMB Partners">
     <h1>GMB Partners</h1>
+    <p>Fazemos seu negócio aparecer onde mais importa.</p>
+  </header>
+
+  <section class="pitch">
     <p>
-      Consultoria especializada em performance local no Google.<br />
-      Conquiste mais visibilidade, clientes e resultados com nosso time.
+      Negócios locais perdem até 40% dos clientes potenciais por estarem invisíveis no Google.
+      A <strong>GMB Partners</strong> aumenta em pelo menos 30% as ligações e visitas em até 60 dias.
+      Otimizamos seu perfil no Google Meu Negócio, geramos reviews 5 estrelas e colocamos sua empresa no topo das buscas — tudo sem depender de anúncios.
     </p>
-    <a href="https://wa.me/5511953090058" class="btn" target="_blank">
-      Fale com um especialista no WhatsApp
-    </a>
-  </div>
+    <p><em>“Transformamos perfis invisíveis no Google em máquinas de chamadas e visitas locais. Mais visibilidade. Mais clientes. Sem anúncios.”</em></p>
+  </section>
+
+  <section class="proposta">
+    <h2>Como ajudamos sua empresa</h2>
+    <p><strong>1. Quem somos:</strong> Consultoria especializada em gerar visibilidade local e resultados reais.</p>
+    <p><strong>2. O problema:</strong> Perfis mal otimizados, sem reviews ou estratégia, perdem clientes.</p>
+    <p><strong>3. A solução:</strong></p>
+    <ul>
+      <li>Otimização completa do perfil no Google</li>
+      <li>Estratégia de palavras-chave locais</li>
+      <li>Aumento de reviews 5 estrelas</li>
+      <li>Postagens semanais com copy estratégica</li>
+      <li>Monitoramento e ajustes mensais</li>
+    </ul>
+    <p><strong>4. Benefícios:</strong></p>
+    <ul>
+      <li>Topo da busca local</li>
+      <li>Mais ligações e visitas espontâneas</li>
+      <li>Reputação profissional elevada</li>
+      <li>Crescimento sem anúncios</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Vamos conversar?</h2>
+    <p>Entre em contato pelo WhatsApp ou ligue: <strong>(11) 95309-0058</strong></p>
+    <a href="https://wa.me/5511953090058" class="btn" target="_blank">Fale com um especialista no WhatsApp</a>
+  </section>
+
+  <footer>
+    &copy; 2025 GMB Partners. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
