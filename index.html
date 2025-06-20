@@ -1,93 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GMB Partners | Performance local no Google</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f8f6;
-      color: #0f264b;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #1a1a1a;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #0f264b;
-      color: #fff;
-      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f264b, #1a3b6f);
+      color: white;
+      padding: 60px 20px 40px;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     header img {
-      max-width: 160px;
+      max-width: 150px;
       margin-bottom: 20px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      font-weight: 700;
     }
 
-    .pitch, .proposta, .cta {
-      max-width: 800px;
-      margin: 40px auto;
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
       padding: 0 20px;
-      text-align: center;
     }
 
-    .pitch p, .proposta p {
+    .pitch p,
+    .proposta p {
       font-size: 1.1em;
-      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    .proposta h2 {
-      margin-top: 40px;
-      font-size: 1.8em;
+    .proposta h2,
+    .cta h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #0f264b;
     }
 
     .proposta ul {
       list-style: none;
-      padding: 0;
-      margin-top: 20px;
+      padding-left: 0;
+      margin: 20px 0;
+    }
+
+    .proposta ul li {
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
     }
 
     .proposta ul li::before {
-      content: "✔️ ";
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #2e7d32;
+      font-weight: bold;
     }
 
     .cta {
-      margin-top: 60px;
+      text-align: center;
+      margin-top: 80px;
     }
 
     .btn {
+      display: inline-block;
       background-color: #0f264b;
       color: #fff;
-      padding: 14px 28px;
-      border: none;
+      padding: 14px 32px;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: 600;
       font-size: 1.1em;
-      transition: background 0.3s;
-      display: inline-block;
-      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
 
     .btn:hover {
-      background-color: #09182e;
+      background-color: #092044;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 0.9em;
-      color: #777;
+      color: #666;
+      background-color: #e9ecef;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg" alt="Logo GMB Partners">
+    <img src="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg" alt="Logo GMB Partners" />
     <h1>GMB Partners</h1>
     <p>Fazemos seu negócio aparecer onde mais importa.</p>
   </header>
