@@ -7,7 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: #f9f9f9;
@@ -41,7 +47,7 @@
       z-index: 1;
     }
 
-    /* Marca d’água da logo nas seções */
+    /* Marca d’água */
     section::before {
       content: "";
       background-image: url('https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg');
@@ -68,7 +74,8 @@
       color: #0f264b;
     }
 
-    .pitch p, .proposta p {
+    .pitch p,
+    .proposta p {
       font-size: 1.1em;
       margin-bottom: 20px;
     }
@@ -114,6 +121,11 @@
       margin-top: 60px;
     }
 
+    .cta p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
     .btn {
       background-color: #0f264b;
       color: #fff;
@@ -124,6 +136,7 @@
       font-size: 1.1em;
       transition: 0.3s;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      display: inline-block;
     }
 
     .btn:hover {
@@ -155,8 +168,14 @@
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 2em; }
-      .btn { width: 100%; padding: 14px; }
+      header h1 {
+        font-size: 2em;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px;
+      }
     }
   </style>
 </head>
