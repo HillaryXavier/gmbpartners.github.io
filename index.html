@@ -1,262 +1,355 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="GMB Partners - Otimização de perfis Google Meu Negócio para aumentar ligações e visitas locais.">
-  <meta name="keywords" content="Google Meu Negócio, SEO local, GMB, Otimização perfil Google, Visibilidade local">
-  <title>GMB Partners | Performance local no Google</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GMB Partners | Performance local no Google</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- FontAwesome CDN para ícones vetoriais -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+  /* Reset e básicos */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
+  }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #f9f9f9;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f9f9f9;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
 
-    header {
-      background: linear-gradient(135deg, #0f264b, #193d6f);
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px 40px;
-    }
+  /* MENU FIXO NO TOPO */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #0f264b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 30px;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
 
-    header img {
-      width: 160px;
-      max-width: 90%;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
-    }
+  .logo {
+    height: 42px;
+    cursor: pointer;
+  }
 
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 0.5em;
-    }
+  nav a {
+    color: #fff;
+    margin-left: 28px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover, nav a:focus {
+    color: #25D366;
+    outline: none;
+  }
 
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+  /* Espaço para o header fixo */
+  body {
+    padding-top: 70px;
+  }
 
-    section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
+  /* SEÇÕES */
+  section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
 
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #0f264b;
-    }
+  /* Marca d’água sutil e repetida */
+  section::before {
+    content: "";
+    background-image: url('https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg');
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    opacity: 0.04;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+  }
+  section > * {
+    position: relative;
+    z-index: 2;
+  }
 
-    p, li {
-      font-size: 1.1em;
-      margin-bottom: 1em;
-    }
+  /* PARALAXE na seção pitch */
+  .pitch {
+    background: url('https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg') center/contain no-repeat fixed;
+    background-color: #f9f9f9;
+    background-blend-mode: lighten;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 0.1);
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+  .pitch p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pitch em {
+    color: #0f264b;
+    font-weight: 600;
+  }
 
-    ul li {
-      position: relative;
-      padding-left: 28px;
-      margin-bottom: 10px;
-    }
+  /* Títulos */
+  h2 {
+    font-size: 2.2em;
+    margin-bottom: 24px;
+    color: #0f264b;
+    font-weight: 700;
+    text-align: center;
+  }
 
-    ul li::before {
-      content: "✔️";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #2e7d32;
-    }
+  /* Listas com ícones SVG */
+  ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+    color: #333;
+  }
+  ul li svg {
+    fill: #2e7d32;
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
 
+  /* BENEFÍCIOS EM GRID 3X2 */
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 32px;
+    margin-top: 30px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 24px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  }
+
+  .card .icon {
+    font-size: 1.8em;
+    color: #25D366;
+    flex-shrink: 0;
+  }
+  .card p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #222;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    margin-top: 70px;
+  }
+  .cta p {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+    color: #0f264b;
+    font-weight: 600;
+  }
+  .btn {
+    background-color: #0f264b;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  }
+  .btn:hover, .btn:focus {
+    background-color: #25D366;
+    transform: scale(1.05);
+    outline: none;
+  }
+  .btn .wa-icon {
+    font-size: 1.5em;
+  }
+
+  /* WhatsApp fixo */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    text-decoration: none;
+    font-size: 26px;
+    z-index: 10001;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .whatsapp-float:hover {
+    background-color: #1ebe57;
+    transform: scale(1.1);
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    background-color: #eaeff4;
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 60px;
+  }
+
+  /* RESPONSIVO */
+  @media (max-width: 800px) {
     .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px 30px;
-      margin-top: 30px;
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    .card {
-      background: #fff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      align-items: center;
+    nav a {
+      margin-left: 18px;
+      font-size: 0.95rem;
     }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }
+  @media (max-width: 480px) {
+    .benefits {
+      grid-template-columns: 1fr;
     }
-
-    .card .icon {
-      font-size: 1.5em;
-      margin-right: 12px;
+    header {
+      padding: 12px 15px;
     }
-
-    .card p {
-      margin: 0;
-      font-size: 1em;
+    nav a {
+      margin-left: 12px;
+      font-size: 0.9rem;
     }
-
-    .cta {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .cta p {
-      margin-bottom: 20px;
-      font-size: 1.1em;
-    }
-
-    .btn {
-      background-color: #0f264b;
-      color: #fff;
-      padding: 14px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1em;
-      transition: 0.3s;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .btn:hover {
-      background-color: #091b34;
-      transform: scale(1.05);
-    }
-
-    .btn .wa-icon {
-      margin-right: 8px;
-      font-size: 1.3em;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: white;
-      padding: 16px;
-      border-radius: 50%;
-      font-size: 28px;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    }
-
-    .whatsapp-float:hover {
-      background-color: #128c4a;
-      transform: scale(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #eaeff4;
-      font-size: 0.9em;
-      color: #555;
-      margin-top: 60px;
-    }
-
-    @media (max-width: 800px) {
-      .benefits {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .benefits {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg" alt="Logo GMB Partners">
-  <h1>GMB Partners</h1>
-  <p>Fazemos seu negócio aparecer onde mais importa: no topo do Google.</p>
+  <img src="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg" alt="Logo GMB Partners" class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})"/>
+  <nav>
+    <a href="#pitch">Home</a>
+    <a href="#proposta">Serviços</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
-<section class="pitch">
+<section class="pitch" id="pitch" data-aos="fade-up">
   <p>Negócios locais perdem até 40% dos clientes por estarem invisíveis no Google. A <strong>GMB Partners</strong> aumenta chamadas e visitas em até 60 dias. Sem anúncios.</p>
   <p><em>“Transformamos perfis invisíveis em máquinas de chamadas e visitas locais.”</em></p>
 </section>
 
-<section class="proposta">
+<section class="proposta" id="proposta" data-aos="fade-up">
   <h2>Como ajudamos sua empresa</h2>
   <p><strong>Problema:</strong> Perfis mal otimizados, sem reviews ou estratégia, perdem clientes.</p>
   <p><strong>Solução:</strong></p>
   <ul>
-    <li>Otimização no Google Meu Negócio</li>
-    <li>Palavras-chave locais</li>
-    <li>Mais reviews 5 estrelas</li>
-    <li>Postagens semanais</li>
-    <li>Monitoramento mensal</li>
+    <li>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512"><path d="M504.5 75.5l-75-75c-10-10-27-10-37 0L167 225.9c-11 11-14 28-6 41 32 58 109 134 184 184 12 8 30 5 41-6L511 137c10-10 10-27 0-37zM184 307l-47-47 26-26 47 47-26 26z"/></svg>
+      Otimização do perfil Google Meu Negócio (Google Business Profile).
+    </li>
+    <li>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512"><path d="M504.5 75.5l-75-75c-10-10-27-10-37 0L167 225.9c-11 11-14 28-6 41 32 58 109 134 184 184 12 8 30 5 41-6L511 137c10-10 10-27 0-37zM184 307l-47-47 26-26 47 47-26 26z"/></svg>
+      Captação e gestão de avaliações reais dos seus clientes.
+    </li>
+    <li>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512"><path d="M504.5 75.5l-75-75c-10-10-27-10-37 0L167 225.9c-11 11-14 28-6 41 32 58 109 134 184 184 12 8 30 5 41-6L511 137c10-10 10-27 0-37zM184 307l-47-47 26-26 47 47-26 26z"/></svg>
+      Relatórios mensais para acompanhar o desempenho.
+    </li>
   </ul>
 </section>
 
-<section class="beneficios">
-  <h2>Benefícios Reais</h2>
+<section id="beneficios" data-aos="fade-up">
+  <h2>Benefícios para sua empresa</h2>
   <div class="benefits">
-    <div class="card"><span class="icon">📞</span><p>Topo das buscas locais</p></div>
-    <div class="card"><span class="icon">📈</span><p>Receber mais ligações e visitas espontâneas</p></div>
-    <div class="card"><span class="icon">⭐</span><p>Melhorar reputação e percepção do negócio</p></div>
-    <div class="card"><span class="icon">📊</span><p>Mais ligações e visitas espontâneas</p></div>
-    <div class="card"><span class="icon">👍</span><p>Reputação fortalecida</p></div>
-    <div class="card"><span class="icon">🌱</span><p>Crescimento sem anúncios</p></div>
+    <div class="card">
+      <i class="fa-solid fa-chart-line icon" aria-hidden="true"></i>
+      <p>Aumenta sua visibilidade para clientes locais no Google.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-phone icon" aria-hidden="true"></i>
+      <p>Mais chamadas e visitas físicas no seu ponto de venda.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-shield-halved icon" aria-hidden="true"></i>
+      <p>Mais reputação e avaliação real do seu negócio.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-user-group icon" aria-hidden="true"></i>
+      <p>Clientes mais engajados e fidelizados.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-hand-holding-dollar icon" aria-hidden="true"></i>
+      <p>Retorno sobre investimento e aumento no faturamento.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-rocket-launch icon" aria-hidden="true"></i>
+      <p>Suporte especializado e acompanhamento contínuo.</p>
+    </div>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Vamos conversar?</h2>
-  <p>Fale agora com um especialista:</p>
-  <a href="https://wa.me/5511953090058" class="btn" target="_blank" rel="noopener">
-    <span class="wa-icon">💬</span> Fale no WhatsApp
+<section class="cta" id="contato" data-aos="fade-up">
+  <p>Quer aumentar suas chamadas e visitas? <strong>Fale com a GMB Partners agora!</strong></p>
+  <a href="https://api.whatsapp.com/send?phone=5511987654321" target="_blank" rel="noopener" class="btn">
+    <i class="fa-brands fa-whatsapp wa-icon"></i> Entrar em contato
   </a>
 </section>
 
-<a href="https://wa.me/5511953090058" target="_blank" class="whatsapp-float" aria-label="WhatsApp">💬</a>
+<!-- WhatsApp flutuante fixo -->
+<a href="https://api.whatsapp.com/send?phone=5511987654321" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <footer>
-  © 2025 GMB Partners - Todos os direitos reservados
+  <p>© 2025 GMB Partners. Todos os direitos reservados.</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 800,
+    duration: 900,
     easing: 'ease-in-out',
-    once: true
+    once: true,
   });
 </script>
-
 </body>
 </html>
-
