@@ -40,7 +40,7 @@
     background-size: 300px;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.08; /* marca d'água mais visível */
+    opacity: 0.08;
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
   }
@@ -66,10 +66,11 @@
     font-weight: bold;
   }
 
+  /* Benefícios em grid 3x2 */
   .benefits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
     margin-top: 30px;
   }
   .card {
@@ -90,49 +91,6 @@
     margin: 0;
     font-size: 1em;
   }
-
-  /* Portfólio */
-  .portfolio-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .portfolio-grid img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-  }
-  .portfolio-grid img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Formulário */
-  .contato form {
-    display: grid;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  .contato input,
-  .contato textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1em;
-    resize: vertical;
-  }
-  .contato button {
-    background-color: #0f264b;
-    color: white;
-    padding: 14px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  .contato button:hover { background-color: #091b34; }
 
   .cta {
     text-align: center;
@@ -187,10 +145,18 @@
     margin-top: 60px;
   }
 
-  @media (max-width: 600px) {
-    header h1 { font-size: 2em; }
-    .btn { width: 100%; justify-content: center; }
+  @media (max-width: 800px) {
+    .benefits {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
+
+  @media (max-width: 480px) {
+    .benefits {
+      grid-template-columns: 1fr;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -228,26 +194,6 @@
     <div class="card" data-aos="fade-up" data-aos-delay="500"><span class="icon">👍</span><p>Reputação fortalecida</p></div>
     <div class="card" data-aos="fade-up" data-aos-delay="600"><span class="icon">🌱</span><p>Crescimento sem anúncios</p></div>
   </div>
-</section>
-
-<section class="portfolio" data-aos="fade-up">
-  <h2>Portfólio</h2>
-  <div class="portfolio-grid">
-    <img src="https://via.placeholder.com/400x250?text=Projeto+1" alt="Projeto 1">
-    <img src="https://via.placeholder.com/400x250?text=Projeto+2" alt="Projeto 2">
-    <img src="https://via.placeholder.com/400x250?text=Projeto+3" alt="Projeto 3">
-    <img src="https://via.placeholder.com/400x250?text=Projeto+४" alt="Projeto 4">
-  </div>
-</section>
-
-<section class="contato" data-aos="fade-up">
-  <h2>Entre em contato</h2>
-  <form action="https://formsubmit.co/contato.gmbpartners@gmail.com" method="POST">
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu e-mail" required>
-    <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-    <button type="submit">Enviar mensagem</button>
-  </form>
 </section>
 
 <section class="cta" data-aos="fade-up">
