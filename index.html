@@ -34,12 +34,17 @@
     }
 
     .logo {
-  height: 58px;
-  padding: 4px;
+  height: 64px; /* ← aumentamos aqui */
+  padding: 4px 6px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
     nav a {
