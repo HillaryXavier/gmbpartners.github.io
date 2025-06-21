@@ -44,20 +44,26 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
-      transition: transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    nav a .emoji {
+      color: #fff;
+      margin-right: 6px;
+      font-size: 1.1em;
+      transition: color 0.2s ease;
     }
 
     nav a:hover, nav a:focus {
       transform: scale(1.1);
       outline: none;
+      color: #25D366;
     }
 
-    nav a .emoji {
+    nav a:hover .emoji, nav a:focus .emoji {
       color: #25D366;
-      margin-right: 6px;
-      font-size: 1.1em;
-      display: inline-block;
-      vertical-align: middle;
     }
 
     section {
@@ -116,6 +122,11 @@
     .green {
       color: #25D366;
       font-weight: 700;
+    }
+
+    .highlight-blue {
+      color: #0f264b;
+      font-weight: 600;
     }
 
     .pitch-quote {
@@ -294,10 +305,10 @@
 <section class="pitch" id="pitch" data-aos="fade-up">
   <h2 class="pitch-title">Você está invisível no Google?</h2>
   <p class="pitch-subtitle">
-    Negócios locais perdem até <strong>40% dos clientes</strong> por estarem fora do radar digital.
+    Negócios locais perdem até <strong class="highlight-blue">40% dos clientes</strong> por estarem fora do radar digital.
   </p>
   <p class="pitch-highlight">
-    A <strong>GMB Partners</strong> aumenta <strong>chamadas</strong> e <strong>visitas</strong> em até <span class="green">60 dias</span>, sem anúncios.
+    A <strong class="highlight-blue">GMB Partners</strong> aumenta <strong class="highlight-blue">chamadas</strong> e <strong class="highlight-blue">visitas</strong> em até <span class="highlight-blue">60 dias</span>, sem anúncios.
   </p>
   <div class="pitch-quote">
     <i class="fa-solid fa-quote-left"></i>
