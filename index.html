@@ -50,20 +50,21 @@
     }
 
     nav a .emoji {
-  color: #fff;
-  margin-right: 6px;
-  font-size: 1.1em;
-  transition: color 0.2s ease;
-}
+      filter: brightness(0) invert(1);
+      margin-right: 6px;
+      font-size: 1.1em;
+      transition: filter 0.3s ease;
+    }
 
     nav a:hover, nav a:focus {
       transform: scale(1.1);
       outline: none;
-      color: #0f264b;
+      color: #25D366;
     }
 
     nav a:hover .emoji, nav a:focus .emoji {
-      color: #0f264b;
+      filter: none;
+      color: #25D366;
     }
 
     section {
