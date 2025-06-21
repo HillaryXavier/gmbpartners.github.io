@@ -319,6 +319,12 @@ nav {
   }
 } /* ✅ Fechando a media query corretamente aqui */
 
+    @media (min-width: 801px) {
+  .whatsapp-float {
+    display: none;
+  }
+}
+    
 .solucao {
   max-width: 800px;
   margin: 60px auto;
@@ -366,6 +372,17 @@ nav {
   font-size: 1.3em;
   color: #25D366;
 }
+
+    @keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.whatsapp-float {
+  animation: pulse 2s infinite ease-in-out;
+}
+    
   </style>
 </head>
 <body>
