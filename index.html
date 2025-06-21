@@ -34,17 +34,27 @@
     }
 
     .logo {
-  height: 64px; /* ← aumentamos aqui */
+  height: 64px;
   padding: 4px 6px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.2s ease;
+  animation: logoFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.95);
 }
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+@keyframes logoFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
     nav a {
