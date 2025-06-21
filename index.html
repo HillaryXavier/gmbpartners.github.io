@@ -47,7 +47,7 @@
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  
 }
 
 @keyframes logoFadeIn {
@@ -55,6 +55,15 @@
     opacity: 1;
     transform: scale(1);
   }
+  .logo:hover {
+  animation: logoPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1.05); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1.05); }
+}
 }
 nav {
   display: flex;
