@@ -378,11 +378,81 @@ nav a .icon {
 .whatsapp-float {
   animation: pulse 2s infinite ease-in-out;
 }
-    
+   
+.lancamento-hero {
+  background: linear-gradient(135deg, #0f264b, #14375a);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lancamento-hero::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at top left, #25D36633, transparent 60%);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.lancamento-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lancamento-hero h1 {
+  font-size: 2.6em;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.lancamento-hero p {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.btn-lancamento {
+  background-color: #25D366;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1.15em;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.btn-lancamento:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+ 
   </style>
 </head>
 <body>
 
+<section id="lancamento" class="lancamento-hero" data-aos="fade-down">
+  <div class="lancamento-content">
+    <h1>🚀 Lançamento Oficial: 07/07</h1>
+    <p><strong>Desconto exclusivo de 10%</strong> para os <strong>5 primeiros clientes</strong> que fecharem com a gente!</p>
+    <a href="https://api.whatsapp.com/send?phone=5511953090058" target="_blank" class="btn btn-lancamento">
+      <i class="fa-brands fa-whatsapp wa-icon"></i> Quero garantir meu desconto
+    </a>
+  </div>
+</section>
+  
 <header>
   <img src="https://raw.githubusercontent.com/HillaryXavier/gmbpartners.github.io/main/logo.jpg" alt="Logo GMB Partners" class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})"/>
   <nav>
