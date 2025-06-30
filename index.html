@@ -360,15 +360,6 @@ nav a .icon {
   line-height: 1.6;
 }
 
-.solucao-lista li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-  top: 4px; /* <- alinhamento vertical ajustado */
-  font-size: 1.3em;
-  color: #0f264b; /* <- nova cor azul */
-  line-height: 1;
-}
 
     @keyframes pulse {
   0% { transform: scale(1); }
@@ -465,6 +456,20 @@ nav a .icon {
   display: block;
   font-size: 0.85rem;
   color: #fff;
+}
+
+.icon-check {
+  color: #0f264b;
+  font-size: 1.1em;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.solucao-lista li {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 0; /* remove espaço desnecessário do antigo ícone */
 }
     
   </style>
@@ -570,10 +575,11 @@ nav a .icon {
   <div class="solucao-lista">
     <p><strong>Solução:</strong></p>
     <ul>
-  <li>Otimização do perfil Google Meu Negócio (Google Business Profile)</li>
-  <li>Captação e gestão de avaliações reais dos seus clientes</li>
-  <li>Relatórios mensais para acompanhar o desempenho</li>
+  <li><i class="fa-solid fa-check icon-check"></i> Otimização do perfil Google Meu Negócio (Google Business Profile)</li>
+  <li><i class="fa-solid fa-check icon-check"></i> Captação e gestão de avaliações reais dos seus clientes</li>
+  <li><i class="fa-solid fa-check icon-check"></i> Relatórios mensais para acompanhar o desempenho</li>
 </ul>
+
   </div>
 </section>
 
